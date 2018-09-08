@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "dev-server": "webpack-dev-server --mode development  --open"
+    "dev-server": "webpack-dev-server --mode development  --open",
+    "start": "node server/server.js",
+    "heroku-postbuild": "npm run build"
   },
   "author": "Norayr Ghukasyan",
   "license": "ISC",
