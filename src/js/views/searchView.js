@@ -77,6 +77,11 @@ const renderButton = (page, numResults, resPerPage) => {
     } else if (page === pages) {
          // Only button to go to prev page
         button = createButton(page, 'prev');
+    } 
+    
+    // No button when the results are less than or equal to resPerPage ` 10
+    if (numResults <= 10) {
+        button = '';
     }
 
     elements.searchResultPages.insertAdjacentHTML("afterbegin", button);
